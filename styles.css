@@ -1,0 +1,104 @@
+/* ===============================
+   RESET BÁSICO Y CONFIGURACIÓN GLOBAL
+   =============================== */
+* {
+    margin: 0; /* Quita márgenes por defecto */
+    padding: 0; /* Quita paddings por defecto */
+    box-sizing: border-box; /* Incluye borde y padding en el cálculo del ancho */
+}
+
+html {
+    font-size: 16px; /* Tamaño base de fuente */
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    color: #333; /* Color de texto principal */
+}
+
+/* ===============================
+   HEADER (HERO)
+   =============================== */
+.hero {
+    background: url("img/header-back.jpg") no-repeat center/cover; /* Imagen de fondo */
+    height: 60vh; /* Altura de 60% de la ventana */
+    display: flex; /* Flex para centrar contenido */
+    justify-content: center; /* Centra horizontal */
+    align-items: center; /* Centra vertical */
+    color: #fff; /* Texto blanco */
+    text-shadow: 0 2px 4px rgba(252, 63, 63, 0.6); /* Sombra para mejor legibilidad */
+}
+ header {
+    background: url("img/header-background.png") no-repeat center/cover; /* Imagen de fondo */
+    height: 60vh; /* Altura de 60% de la ventana */
+    display: flex; /* Flex para centrar contenido */
+    justify-content: center; /* Centra horizontal */
+    align-items: center; /* Centra vertical */
+    color: #fff; /* Texto blanco */
+    text-shadow: 0 2px 4px rgba(252, 63, 63, 0.6); /* Sombra para mejor legibilidad */
+}
+
+/* ===============================
+   CONTENEDORES
+   =============================== */
+.container {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    min-height: 40vh; /* Altura mínima */
+    padding: 2rem; /* Espaciado interno */
+}
+
+/* GRID adaptable */
+.grid {
+    display: grid; /* Activamos grid */
+    grid-template-columns: 1fr; /* En mobile: 1 columna */
+    gap: 1rem; /* Separación entre columnas/filas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Limita el ancho en pantallas grandes */
+}
+
+/* En desktop (768px o más): 3 columnas */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===============================
+   CARDS
+   =============================== */
+.card {
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background: #e4e4e4; /* Fondo blanco */
+    text-align: center; /* Centra el contenido */
+}
+
+/* ===============================
+   BOTONES
+   =============================== */
+.btn {
+    display: inline-block; /* Se comporta como un bloque en línea */
+    margin-top: 1rem; /* Espaciado superior */
+    padding: 0.6rem 1.2rem; /* Relleno interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    background: #007bff; /* Color principal */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor tipo botón */
+    transition: background 0.3s; /* Animación suave en hover */
+}
+
+.btn:hover {
+    background: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.footer {
+    text-align: center; /* Centra el texto */
+    padding: 1rem; /* Espaciado interno */
+    background: #222; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+}
